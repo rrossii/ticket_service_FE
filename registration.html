@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Sign up</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!--    navigation bar-->
@@ -48,20 +50,20 @@
     </div>
 
     <div class="container">
-        <h1>Sign Up</h1>
         <div class="row">
-            <form>
-                <input type="text" class="form-control" id="name" placeholder="Your Name" required><br>
-                <input type="text" class="form-control" id="surname" placeholder="Enter Surname" required><br>
-                <input type="email" class="form-control" id="email" placeholder="Enter Email" required><br>
-                <input type="password" class="form-control" id="password" placeholder="Enter Password" required><br>
-                <input type="password" class="form-control" id="password_repeat" placeholder="Confirm Password" required><br><br>
-                <input type="submit" class="btn-dark" id="sign-up-btn" value="Sign up">
-            </form>
+            <div class="col">
+                <form>
+                    <h1 class="top-text-form">Sign Up</h1><br>
+                    <input type="text" class="form-control" id="name" placeholder="Your Name" required><br>
+                    <input type="text" class="form-control" id="surname" placeholder="Enter Surname" required><br>
+                    <input type="email" class="form-control" id="email" placeholder="Enter Email" required><br>
+                    <input type="password" class="form-control" id="password" placeholder="Enter Password" required><br>
+                    <input type="password" class="form-control" id="password_repeat" placeholder="Confirm Password" required><br>
+                    <input type="submit" value="Sign up">
+                    <p class="mt-2">Already have an account? <a href="login.html">Sign in</a>.</p>
+                </form>
+            </div>
         </div>
-    </div>
-    <div class="container signin">
-        <p>Already have an account? <a href="login.html">Sign in</a>.</p>
     </div>
 </body>
 </html>
