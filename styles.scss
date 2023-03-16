@@ -43,7 +43,7 @@ form {
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 15%;
+  margin-top: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,12 +73,12 @@ input[type="text"], input[type="email"], input[type="password"] {
   font-family: $primary-font;
   font-size: medium;
 }
+.footer-item {
+  color: #1a1e21;
+  font-family: $digital_font;
+}
 
 //
-
-#contact {
-  margin-top: 30px;
-}
 
 .logo {
   font-family: $digital_font;
@@ -86,7 +86,4 @@ input[type="text"], input[type="email"], input[type="password"] {
   font-weight: bold;
 }
 
-.footer-item {
-  color: #1a1e21;
-  font-family: $digital_font;
-}
+

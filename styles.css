@@ -49,6 +49,10 @@ input[type="text"], input[type="email"], input[type="password"] {
   font-family: "Kulim Park";
   font-size: medium; }
 
+.footer-item {
+  color: #1a1e21;
+  font-family: "Space Grotesk"; }
+
 #contact {
   margin-top: 30px; }
 
@@ -57,8 +61,11 @@ input[type="text"], input[type="email"], input[type="password"] {
   color: #1a1e21;
   font-weight: bold; }
 
-.footer-item {
-  color: #1a1e21;
-  font-family: "Space Grotesk"; }
+footer {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
 
 /*# sourceMappingURL=styles.css.map */

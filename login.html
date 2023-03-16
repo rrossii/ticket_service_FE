@@ -9,7 +9,7 @@
 </head>
 <body>
     <!--    navigation bar-->
-    <div class="container">
+    <div class="container-fluid">
         <nav class="navbar navbar-expand-md" id="navig-bar">
             <a class="navbar-brand" href="index.html">
                 <img src="images/logo.jpg" alt="logo-image" width="30" height="20"
@@ -63,6 +63,7 @@
         </div>
     </div>
 </body>
+<!--footer-->
 <footer>
     <div class="container" id="footer-top">
         <div class="row">
@@ -74,7 +75,7 @@
                 </a>
             </div>
             <div class="col">
-                <p>Search Us</p>
+                <h2 class="contact-text">Search Us</h2>
                 <a href="https://uk-ua.facebook.com/">
                     <img src="images/facebook.svg" alt="fb-link">
                 </a>
@@ -86,18 +87,32 @@
         <div class="row">
             <div class="col">
                 <ul class="footer-links">
-                    <li><a href="concerts.html">Concerts</a></li>
-                    <li><a href="fests.html">Fests</a></li>
-                    <li><a href="theater.html">Theater</a></li>
-                    <li><a href="login.html">Sign in</a></li>
-                    <li><a href="registration.html">Sign up</a></li>
+                    <li><a class="footer-item" href="concerts.html">Concerts</a></li>
+                    <li><a class="footer-item" href="fests.html">Fests</a></li>
+                    <li><a class="footer-item" href="theater.html">Theater</a></li>
+                    <li><a class="footer-item" href="login.html">Sign in</a></li>
+                    <li><a class="footer-item" href="registration.html">Sign up</a></li>
                 </ul>
+            </div>
+            <!--contact-->
+            <div class="col mt-4">
+                <h2 class="contact-text">Contact Us</h2>
+                <div class="row">
+                    <div class="col-8 col-md-4">
+                        <span class="contact-info">Call us:</span><br/>
+                        <span class="contact-info">+38 098 4532 789</span><br/>
+                    </div>
+                    <div class="col-8 col-md-4">
+                        <span class="contact-info">Mail us:</span><br/>
+                        <span class="contact-info">info@ticketserve.com</span><br/>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="container" id="footer-bottom">
+    <div class="container text-center" id="footer-bottom">
         <div class="row">
-            <div class="col-12 col-md-7 col-lg-8">
+            <div class="col mt-3">
                 <p class="footer-bottom-text">© Copyright 2023 TicketServe. All rights reserved. Created by Rosana Klym</p>
             </div>
         </div>
