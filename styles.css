@@ -35,11 +35,22 @@ input[type="submit"] {
 input[type="text"], input[type="email"], input[type="password"] {
   background-color: #e0e8cd; }
 
-.mt-2 {
-  font-family: "Space Grotesk"; }
-
-.top-text-form {
+.top-text-form, .contact-text {
   font-family: "Space Grotesk";
   font-weight: bold; }
+
+.mt-2, .contact-info {
+  font-family: "Space Grotesk"; }
+
+.footer-bottom-text {
+  font-family: "Kulim Park";
+  font-size: medium; }
+
+#contact {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 /*# sourceMappingURL=styles.css.map */
