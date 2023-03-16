@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&family=Space+Grotesk:wght@300;600;700&display=swap');
 
 
-$primary-color: #e0e8cd;
+$primary-color: #dbe8c3;
 $primary-text-color: #1a1e21;
 $button-hover-color: #b672ea;
 $button-color-1: #B7A0C5;
@@ -96,9 +96,14 @@ input[type="text"], input[type="email"], input[type="password"] {
   font-weight: bold;
 }
 
-#page-content {
+#page-content, #top-events {
   text-align: center;
-  margin-top: 30px;
+  margin-bottom: 25%;
+}
+
+footer {
+  margin-top: 30%;
+  border-top: 1px solid #ccc;
 }
 
 // event items
@@ -109,4 +114,39 @@ input[type="text"], input[type="email"], input[type="password"] {
 .event-item a{
   text-decoration: none;
   z-index: 1;
+}
+//
+
+// user info (table)
+tr {
+  font-family: $primary_font;
+  font-weight: normal;
+  color: $primary-text-color;
+  border-bottom: 2px solid #ddd;
+}
+.user-info {
+  background: $primary-color;
+}
+table {
+  width: 100%;
+  height: 350px;
+}
+
+//buttons
+.basic-button {
+  background-color: $button-color-1;
+  padding: 10px 25px;
+
+  margin-top: 15px;
+  margin-right: 20px;
+  margin-left: 20px;
+
+  font-size: 15px;
+  font-family: $digital-font;
+
+  //maybe change later when js (onClick=)
+  a {
+    text-decoration: none;
+    color: $primary-text-color;
+  }
 }
