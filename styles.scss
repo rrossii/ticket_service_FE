@@ -19,21 +19,22 @@ body {
 }
 #main {
   background-image: $background-image;
+  background-position: center;
+  background-size: cover;
+  //display: flex;
+  //align-items: center;
+  //justify-content: center;
+  text-align: center;
 }
 
 //navigation bar
 #navig-bar {
   background-color: $primary-color;
 }
-.nav-link {
+.nav-link, .navbar-brand {
   color: #1a1e21;
   font-family: $digital_font;
   font-weight: bold;
-}
-.navbar-brand {
-  font-family: $digital-font;
-  font-weight: bold;
-  color: #1a1e21;
 }
 
 //
@@ -44,6 +45,7 @@ form {
   margin-left: auto;
   margin-right: auto;
   margin-top: 10%;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;

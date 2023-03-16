@@ -5,26 +5,25 @@ body {
   background-color: #F7FCEE; }
 
 #main {
-  background-image: url("images/background.png"); }
+  background-image: url("images/background.png");
+  background-position: center;
+  background-size: cover;
+  text-align: center; }
 
 #navig-bar {
   background-color: #e0e8cd; }
 
-.nav-link {
+.nav-link, .navbar-brand {
   color: #1a1e21;
   font-family: "Space Grotesk";
   font-weight: bold; }
-
-.navbar-brand {
-  font-family: "Space Grotesk";
-  font-weight: bold;
-  color: #1a1e21; }
 
 form {
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 15%;
+  margin-top: 10%;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -53,19 +52,9 @@ input[type="text"], input[type="email"], input[type="password"] {
   color: #1a1e21;
   font-family: "Space Grotesk"; }
 
-#contact {
-  margin-top: 30px; }
-
 .logo {
   font-family: "Space Grotesk";
   color: #1a1e21;
   font-weight: bold; }
-
-footer {
-  margin-top: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; }
 
 /*# sourceMappingURL=styles.css.map */
