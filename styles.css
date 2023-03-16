@@ -18,12 +18,15 @@ body {
   font-family: "Space Grotesk";
   font-weight: bold; }
 
+.nav-link:hover, .navbar-brand:hover {
+  color: #b672ea; }
+
 form {
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 10%;
-  margin-bottom: 30px;
+  margin-bottom: 25%;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -37,24 +40,38 @@ input[type="submit"] {
 input[type="text"], input[type="email"], input[type="password"] {
   background-color: #e0e8cd; }
 
-.top-text-form, .contact-text {
+.top-text, .contact-text {
   font-family: "Space Grotesk";
   font-weight: bold; }
-
-.mt-2, .contact-info {
-  font-family: "Space Grotesk"; }
 
 .footer-bottom-text {
   font-family: "Kulim Park";
   font-size: medium; }
 
-.footer-item {
+.footer-item, .mt-2, .contact-info {
   color: #1a1e21;
   font-family: "Space Grotesk"; }
+
+.event-main-text-info {
+  font-family: "Space Grotesk";
+  font-weight: bold;
+  color: #1a1e21; }
 
 .logo {
   font-family: "Space Grotesk";
   color: #1a1e21;
   font-weight: bold; }
+
+#page-content {
+  text-align: center;
+  margin-top: 30px; }
+
+.event-item:hover {
+  box-shadow: 5px 5px 20px #cea0f3;
+  z-index: 2; }
+
+.event-item a {
+  text-decoration: none;
+  z-index: 1; }
 
 /*# sourceMappingURL=styles.css.map */
