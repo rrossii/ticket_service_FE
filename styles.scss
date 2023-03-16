@@ -6,6 +6,7 @@
 $primary-color: #e0e8cd;
 $button-hover-color: #B2EFA2;
 $background-image: url('images/background.png');
+$background-color: #F7FCEE;
 $button-color-1: #B7A0C5;
 $button-color-2: #698F7C;
 
@@ -13,16 +14,13 @@ $primary_font: "Kulim Park";
 $digital_font: "Space Grotesk";
 
 
-
 body {
+  background-color: $background-color;
+}
+#main {
   background-image: $background-image;
 }
 
-.navbar-brand {
-  font-family: $digital-font;
-  font-weight: bold;
-  color: #1a1e21;
-}
 //navigation bar
 #navig-bar {
   background-color: $primary-color;
@@ -31,6 +29,11 @@ body {
   color: #1a1e21;
   font-family: $digital_font;
   font-weight: bold;
+}
+.navbar-brand {
+  font-family: $digital-font;
+  font-weight: bold;
+  color: #1a1e21;
 }
 
 //
@@ -74,10 +77,16 @@ input[type="text"], input[type="email"], input[type="password"] {
 //
 
 #contact {
-  margin-left: auto;
-  margin-right: auto;
-  //margin-top: 15%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-top: 30px;
+}
+
+.logo {
+  font-family: $digital_font;
+  color: #1a1e21;
+  font-weight: bold;
+}
+
+.footer-item {
+  color: #1a1e21;
+  font-family: $digital_font;
 }
