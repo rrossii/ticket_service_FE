@@ -3,8 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <title>Purchase history</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<!--    navigation bar-->
+<div class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-expand-md" id="navig-bar">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="logo-image" width="40" height="30"
+                     class="d-inline-block align-top"/>
+                TicketServe
+            </a>
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="concerts.html">Concerts</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="fests.html">Fests</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="theater.html">Theater</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="login.html">Sign in</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="registration.html">Sign up</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<!--table history-->
+<div class="container text-center mt-4">
+    <div class="row">
+        <div class="col">
+            <table class="purchase-history">
+                <tr>
+                    <th>ID</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>12345</td>
+                    <td>Purchased</td>
+                    <td>15.03.2023 11:40</td>
+                    <td>1100</td>
+                </tr>
+                <tr>
+                    <td>12346</td>
+                    <td>Purchased</td>
+                    <td>21.09.2022 17:23</td>
+                    <td>500</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
 </body>
+
+<!--footer-->
+<footer class="mt-auto">
+    <div class="container" id="footer-top">
+        <div class="row">
+            <div class="col">
+                <a class="logo" href="index.html">
+                    <img src="images/logo.png" alt="logo-image" width="30" height="30"
+                         class="d-inline-block align-top"/>
+                    TicketServe
+                </a>
+            </div>
+            <div class="col">
+                <h2 class="contact-text">Search Us</h2>
+                <a href="https://www.instagram.com/">
+                    <img src="images/instagram.png" alt="inst-link" width="30" height="30">
+                </a>
+                <a href="https://uk-ua.facebook.com/">
+                    <img src="images/facebook.png" alt="fb-link" width="30" height="30">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <ul class="footer-links">
+                    <li><a class="footer-item" href="concerts.html">Concerts</a></li>
+                    <li><a class="footer-item" href="fests.html">Fests</a></li>
+                    <li><a class="footer-item" href="theater.html">Theater</a></li>
+                    <li><a class="footer-item" href="login.html">Sign in</a></li>
+                    <!--                        delete later-->
+                    <li><a class="footer-item" href="user-profile.html">User profile</a></li>
+                    <li><a class="footer-item" href="admin-profile.html">Admin profile</a></li>
+                </ul>
+            </div>
+            <!--contact-->
+            <div class="col mt-4">
+                <h2 class="contact-text">Contact Us</h2>
+                <div class="row">
+                    <div class="col-8 col-md-4">
+                        <span class="contact-info">Call us:</span><br/>
+                        <span class="contact-info">+38 098 4532 789</span><br/>
+                    </div>
+                    <div class="col-8 col-md-4">
+                        <span class="contact-info">Mail us:</span><br/>
+                        <span class="contact-info">info@ticketserve.com</span><br/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center" id="footer-bottom">
+        <div class="row">
+            <div class="col mt-3">
+                <p class="footer-bottom-text">© Copyright 2023 TicketServe. All rights reserved. Created by Rosana Klym</p>
+            </div>
+        </div>
+    </div>
+</footer>
 </html>

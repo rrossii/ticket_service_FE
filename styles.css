@@ -7,19 +7,29 @@ body {
 #main {
   background-image: url("images/background.png");
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
+  padding-bottom: 100px;
+  padding-top: 100px;
   text-align: center; }
+  #main a {
+    text-decoration: none; }
 
 #navig-bar {
-  background-color: #dbe8c3; }
+  background-color: #dbc1ea; }
 
 .nav-link, .navbar-brand {
   color: #1a1e21;
   font-family: "Space Grotesk";
   font-weight: bold; }
 
-.nav-link:hover, .navbar-brand:hover {
-  color: #b672ea; }
+.navbar-brand {
+  color: #ffffff; }
+
+.nav-link:hover {
+  color: #ffffff; }
+
+.navbar-brand:hover {
+  color: #a5f393; }
 
 form {
   max-width: 400px;
@@ -38,7 +48,7 @@ input[type="submit"] {
   font-family: "Space Grotesk"; }
 
 input[type="text"], input[type="email"], input[type="password"] {
-  background-color: #dbe8c3; }
+  background-color: #e8f1d6; }
 
 .top-text, .contact-text {
   font-family: "Space Grotesk";
@@ -50,12 +60,18 @@ input[type="text"], input[type="email"], input[type="password"] {
 
 .footer-item, .mt-2, .contact-info {
   color: #1a1e21;
-  font-family: "Space Grotesk"; }
+  font-family: "Space Grotesk";
+  text-decoration: none; }
 
 .event-main-text-info {
   font-family: "Space Grotesk";
   font-weight: bold;
   color: #1a1e21; }
+
+.main-poster-text {
+  font-family: "Space Grotesk";
+  font-weight: bold;
+  color: #ffffff; }
 
 .logo {
   font-family: "Space Grotesk";
@@ -84,12 +100,18 @@ tr {
   color: #1a1e21;
   border-bottom: 2px solid #ddd; }
 
+tr:hover {
+  background-color: #dbc1ea; }
+
 .user-info {
-  background: #dbe8c3; }
+  background: #e8f1d6; }
 
 table {
   width: 100%;
   height: 350px; }
+
+.purchase-history {
+  margin-bottom: 25%; }
 
 .basic-button {
   background-color: #B7A0C5;
@@ -98,10 +120,14 @@ table {
   margin-right: 20px;
   margin-left: 20px;
   font-size: 15px;
-  font-family: "Space Grotesk";
-  align-items: center; }
+  font-family: "Space Grotesk"; }
   .basic-button a {
     text-decoration: none;
     color: #1a1e21; }
+
+#admin-page {
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center; }
 
 /*# sourceMappingURL=styles.css.map */
