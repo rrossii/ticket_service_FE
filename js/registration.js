@@ -20,6 +20,8 @@ function register(first_name, last_name, username, user_status, email, phone, pa
             localStorage.setItem('name', data.first_name);
             localStorage.setItem('surname', data.last_name);
             localStorage.setItem('email', data.email);
+            localStorage.setItem('user_session', true);
+            localStorage.setItem('user_status', data.user_status);
 
             window.location.href = "index.html";
         })
