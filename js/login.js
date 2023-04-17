@@ -17,13 +17,13 @@ function login(email, password) {
             return response.json()
         })
         .then(data => {
-            localStorage.setItem('name', data.name);
-            localStorage.setItem('surname', data.surname);
+            localStorage.setItem('name', data.first_name);
+            localStorage.setItem('surname', data.last_name);
             localStorage.setItem('email', data.email);
 
-            if (data.status === "admin") {
+            if (data.user_status === "admin") {
                 window.location.href = "admin-profile.html";
-            } else if (data.status === "user") {
+            } else if (data.user_status === "user") {
                 window.location.href = "index.html";
             }
 
