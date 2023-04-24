@@ -81,6 +81,10 @@
                     <td id="email">lol@ticket.com</td>
                 </tr>
                 <tr>
+                    <td>Status</td>
+                    <td id="user-status">Admin</td>
+                </tr>
+                <tr>
                     <td>City</td>
                     <td>Kyiv</td>
                 </tr>
@@ -94,14 +98,17 @@
     const name = localStorage.getItem('name');
     const surname = localStorage.getItem('surname');
     const email = localStorage.getItem('email');
+    const userStatus = localStorage.getItem('user_status');
 
     const nameElement = document.getElementById("name");
     const surnameElement = document.getElementById("surname");
     const emailElement = document.getElementById("email");
+    const userStatusElement = document.getElementById("user-status");
 
     nameElement.innerText = name;
     surnameElement.innerText = surname;
     emailElement.innerText = email;
+    userStatusElement.innerText = userStatus;
 </script>
 <script src="js/logout.js"></script>
 <script src="js/remove-sign-in-up-buttons.js"></script>

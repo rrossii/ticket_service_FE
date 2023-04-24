@@ -55,6 +55,58 @@
         </nav>
     </div>
 </div>
+<!-- main -->
+<div class="container text-center" id="add-event">
+    <div class="row">
+        <div class="col-md-7">
+            <form>
+                <h1 class="top-text">Add event</h1><br>
+                <input type="text" class="form-control" placeholder="Name" required><br>
+                <input type="text" class="form-control" placeholder="Performer" required><br>
+                <input type="text" class="form-control" placeholder="Country" required><br>
+                <input type="text" class="form-control" placeholder="City" required><br>
+                <input type="text" class="form-control" placeholder="Price" required><br>
+                <input type="text" class="form-control" placeholder="Information" required><br>
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <select class="year-dropdown">
+                            <option value="0">2023</option>
+                            <option value="0">2024</option>
+                            <option value="0">2025</option>
+                        </select>
+                        <select class="month-dropdown">
+                            <option value="0">January</option>
+                            <option value="1">February</option>
+                            <option value="2">March</option>
+                            <option value="3">April</option>
+                            <option value="4">May</option>
+                            <option value="5">June</option>
+                            <option value="6">July</option>
+                            <option value="7">August</option>
+                            <option value="8">September</option>
+                            <option value="9">October</option>
+                            <option value="10">November</option>
+                            <option value="11">December</option>
+                        </select>
+                        <select class="day-dropdown">
+                            <!-- дописати-->
+                        </select>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="col-md-5">
+            <form>
+                <img src="images/basic-photo-icon.jpg" alt="no-uploaded-photo" width="70%" height="50%">
+                <input type="file" class="my-3" name="event-photo">
+                <input type="submit" value="Upload a photo">
+            </form>
+            <input type="submit" class="my-4" value="Cancel">
+            <input type="submit" class="my-4" value="Save">
+        </div>
+    </div>
+</div>
 
 
 <script src="js/remove-sign-in-up-buttons.js"></script>
