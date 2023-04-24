@@ -20,11 +20,11 @@ function login(email, password) {
             localStorage.setItem('name', data.first_name);
             localStorage.setItem('surname', data.last_name);
             localStorage.setItem('email', data.email);
-            localStorage.setItem('user_session', true);
+            localStorage.setItem('user_session', "True");
             localStorage.setItem('user_status', data.user_status);
 
             if (data.user_status === "admin") {
-                window.location.href = "admin-profile.html";
+                 window.location.href = "admin-profile.html";
             } else if (data.user_status === "user") {
                 window.location.href = "index.html";
             }

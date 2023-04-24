@@ -57,12 +57,14 @@
         <div class="col-12">
             <h1 class="top-text">Profile</h1><br>
         </div>
-        <div class="col-12 col-md-5 mt-5">
-            <button class="basic-button"><a href="purchase-history.html">Purchase history</a></button>
-            <div class="w-100"></div>
-            <button class="basic-button"><a href="#">Favourites</a></button>
+        <div class="col-md-3">
+            <nav class="nav nav-pills flex-column">
+                <button class="basic-button"><a href="purchase-history.html">Purchase history</a></button>
+                <button class="basic-button"><a href="#">Favourites</a></button>
+                <button class="basic-button my-3" id="logout-btn">Log out</button>
+            </nav>
         </div>
-        <div class="col-12 col-md-5 mt-5">
+        <div class="col-md-9">
             <table class="user-info">
                 <tr>
                     <td>Name</td>
@@ -81,8 +83,7 @@
                     <td>Kyiv</td>
                 </tr>
             </table>
-            <button class="basic-button"><a href="profile-update.html">Change</a></button>
-            <button class="basic-button" id="logout-btn">Log out</button>
+            <button class="basic-button"><a href="profile-update.html">Edit</a></button>
         </div>
     </div>
 </div>
@@ -103,7 +104,6 @@
 </script>
 <script src="js/logout.js"></script>
 <script src="js/remove-sign-in-up-buttons.js"></script>
-<!--<script src="js/user-or-admin-profile.js"></script>-->
 
 </body>
 <!--footer-->
