@@ -5,8 +5,8 @@ export function Main() {
                 <div className="row">
                     <div className="col">
                         <a href="#">
-                            <h1 className="main-poster-text">28 APRIL, FRIDAY</h1><br>
-                            <h1 className="main-poster-text">UKRAINIAN FUNK MUSIC: 70s-80s</h1></br>
+                            <h1 className="main-poster-text">28 APRIL, FRIDAY</h1><br />
+                            <h1 className="main-poster-text">UKRAINIAN FUNK MUSIC: 70s-80s</h1><br />
                             <h1 className="main-poster-text">!FESTREPUBLIC</h1>
                         </a>
                     </div>
@@ -16,7 +16,7 @@ export function Main() {
             <div className="container-fluid mt-5" id="top-events">
                 <div className="row">
                     <div className="col-12">
-                        <h1 className="top-text">Top Events</h1><br/>
+                        <h1 className="top-text">Top Events</h1><br />
                     </div>
                     <div className="col col-md-5 col-lg-3 mx-4">
                         <div className="event-item">
