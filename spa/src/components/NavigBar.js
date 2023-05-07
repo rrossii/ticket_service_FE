@@ -1,13 +1,14 @@
+import { Link } from 'react-router-dom';
 export function NavigBar() {
     return(
         <div className="container-fluid">
             <div className="row">
                 <nav className="navbar navbar-expand-md" id="navig-bar">
-                    <a className="navbar-brand" href="index.html">
+                    <Link className="navbar-brand" to="/">
                         <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="logo-image" width="40" height="30"
                              className="d-inline-block align-top"/>
                         TicketServe
-                    </a>
+                    </Link>
                     <button className="navbar-toggler"
                             type="button"
                             data-bs-toggle="collapse"
@@ -31,16 +32,16 @@ export function NavigBar() {
                                 <a className="nav-link" href="theater.html">Theater</a>
                             </li>
                             <li className="nav-item active" id="login-btn">
-                                <a className="nav-link" href="login.html">Sign in</a>
+                                <Link className="nav-link" to="/login">Sign in</Link>
                             </li>
                             <li className="nav-item active" id="register-btn">
-                                <a className="nav-link" href="registration.html">Sign up</a>
+                                <Link className="nav-link" to="/registration">Sign up</Link>
                             </li>
                             <li className="nav-item active" id="profile-user-btn">
-                                <a className="nav-link" href="user-profile.html">Profile</a>
+                                <Link className="nav-link" to="/user-profile">Profile</Link>
                             </li>
                             <li className="nav-item active" id="profile-admin-btn">
-                                <a className="nav-link" href="admin-profile.html">Profile</a>
+                                <Link className="nav-link" to="/admin">Profile</Link>
                             </li>
                         </ul>
                     </div>

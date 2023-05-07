@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 export function Footer() {
     return (
@@ -7,11 +8,11 @@ export function Footer() {
                 <div className="container" id="footer-top">
                     <div className="row">
                         <div className="col">
-                            <a className="logo" href="index.html">
+                            <Link className="logo" to="/">
                                 <img src={process.env.PUBLIC_URL + '/images/logo.png'} alt="logo-image" width="30" height="30"
                                      className="d-inline-block align-top"/>
                                 TicketServe
-                            </a>
+                            </Link>
                         </div>
                         <div className="col">
                             <h2 className="contact-text">Search Us</h2>
@@ -29,7 +30,7 @@ export function Footer() {
                                 <li><a className="footer-item" href="concerts.html">Concerts</a></li>
                                 <li><a className="footer-item" href="fests.html">Fests</a></li>
                                 <li><a className="footer-item" href="theater.html">Theater</a></li>
-                                <li><a className="footer-item" href="login.html">Sign in</a></li>
+                                <li><Link className="footer-item" to="/login">Sign in</Link></li>
                             </ul>
                         </div>
 
