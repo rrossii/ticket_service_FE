@@ -50,9 +50,10 @@ export function Registration() {
                 "Content-Type": "application/json"
             }
         })
-            .then(response => {
+            .then(async response => {
                 if (!response.ok) {
-                    throw new Error(response.status)
+                    const json_data = await response.json();
+                    throw new Error(json_data.error);
                 }
                 return response.json()
             })
@@ -72,9 +73,7 @@ export function Registration() {
                 } else if (phoneError !== '') {
                     alert(phoneError);
                 } else {
-                    const serverErrorMessage = error.response ? error.response.data.error : 'Unknown error';
-                    console.log(serverErrorMessage);
-                    alert(serverErrorMessage);
+                    alert(error);
                 }
             });
     }

@@ -37,9 +37,10 @@ export function Login() {
             },
             body: JSON.stringify({ email, password })
         })
-            .then(response => {
+            .then(async response => {
                 if (!response.ok) {
-                    throw new Error(response.status);
+                    const json_data = await response.json();
+                    throw new Error(json_data.error);
                 }
                 return response.json()
             })
@@ -58,11 +59,11 @@ export function Login() {
                 }
 
             })
-            .catch(() => {
+            .catch((error) => {
                 if (emailError !== '') {
                     alert(emailError);
                 } else {
-                    alert("Wrong credentials");
+                    alert(error);
                 }
             });
     }
