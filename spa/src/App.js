@@ -11,6 +11,7 @@ import {Registration} from "./components/Registration";
 import {AdminProfile} from "./components/AdminProfile";
 import {UserProfile} from "./components/UserProfile";
 import {UpdateProfile} from "./components/UpdateProfile";
+import {UserListing} from "./components/UserListing";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path='/admin' element={<AdminProfile/>}/>
             <Route path='/user-profile' element={<UserProfile/>}/>
             <Route path='/update-profile' element={<UpdateProfile/>}/>
+            <Route path='/user-list' element={<UserListing/>}/>
           </Routes>
         </div>
         <Footer/>

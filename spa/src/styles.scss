@@ -87,7 +87,7 @@ input[type="text"], input[type="email"], input[type="password"] {
   font-family: $digital_font;
   font-weight: bold;
 }
-.footer-bottom-text {
+.footer-bottom-text, .ordinary-text {
   font-family: $primary-font;
   font-size: medium;
 }

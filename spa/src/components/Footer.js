@@ -5,7 +5,7 @@ export function Footer() {
     return (
         <div>
             <footer className="mt-auto">
-                <div className="container" id="footer-top">
+                <div className="container mt-5 mb-4" id="footer-top">
                     <div className="row">
                         <div className="col">
                             <Link className="logo" to="/">
