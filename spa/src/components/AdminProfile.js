@@ -1,5 +1,7 @@
 import {Logout} from "./Logout";
 import {Link, useNavigate } from "react-router-dom";
+import {isAdmin} from "../utils/Utils";
+import React from "react";
 
 export function AdminProfile() {
     const first_name = localStorage.getItem("first_name" || "");
@@ -10,13 +12,17 @@ export function AdminProfile() {
 
     const navigate = useNavigate();
 
-    if (user_status !== "admin") { // !!!! maybe not string type
+    if (!isAdmin()) {
         return <h1 className={"m-5 text-center"}><b>Access denied. Only admin users are allowed.</b></h1>;
     }
 
     const handleLogout = () => {
         Logout();
         navigate("/");
+    };
+
+    const handleUserListingClick = () => {
+        navigate("/user-list");
     };
 
     return(
@@ -30,7 +36,7 @@ export function AdminProfile() {
                         <button className="basic-button"><a href="purchase-history.html">Purchase history</a></button>
                         <button className="basic-button"><a href="#">Favourites</a></button>
                         <button className="basic-button"><a href="adding-ticket.html">Add new ticket</a></button>
-                        <button className="basic-button"><a href="#">User listing</a></button>
+                        <button onClick={handleUserListingClick} className="basic-button">User listing</button>
                         <button onClick={handleLogout} className="basic-button my-3" id="logout-btn">Log Out</button>
                     </nav>
                 </div>
@@ -57,7 +63,7 @@ export function AdminProfile() {
                             <td id="user-status">{user_status}</td>
                         </tr>
                     </table>
-                    <button className="basic-button"><Link to="update-profile">Edit</Link></button>
+                    <button className="basic-button"><Link to="/update-profile">Edit</Link></button>
                 </div>
             </div>
         </div>

@@ -1,6 +1,8 @@
 
 import {Link, useNavigate} from "react-router-dom";
 import {Logout} from "./Logout";
+import {isAdmin, isUser} from "../utils/Utils";
+import React from "react";
 
 export function UserProfile() {
     const first_name = localStorage.getItem("first_name" || "");
@@ -11,7 +13,7 @@ export function UserProfile() {
 
     const navigate = useNavigate();
 
-    if (user_status !== "user") {
+    if (!isUser()) {
         return <h1 className={"m-5 text-center"}><b>Access denied.</b></h1>;
     }
 
