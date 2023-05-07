@@ -10,6 +10,7 @@ export function Login() {
 
     const emailHandler = (e) => {
         setEmail(e.target.value)
+
         const errorSymbols = " ![]№#$%&'*+-/=?^_`{|}~,;:\"\""
         let containError = false;
         for (let i = 0; i < errorSymbols.length; i++) {
@@ -83,4 +84,3 @@ export function Login() {
         </div>
     );
 }
-
