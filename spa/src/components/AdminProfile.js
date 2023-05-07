@@ -1,4 +1,10 @@
 export function AdminProfile() {
+    const first_name = localStorage.getItem("first_name" || "");
+    const last_name = localStorage.getItem("last_name" || "");
+    const username = localStorage.getItem("username" || "");
+    const user_status = localStorage.getItem("user_status" || "");
+    const email = localStorage.getItem("email" || "");
+
     return(
         <div className="container text-center mt-4" id="admin-page">
             <div className="row">
@@ -18,23 +24,23 @@ export function AdminProfile() {
                     <table className="user-info">
                         <tr>
                             <td>Name</td>
-                            <td id="name">Ann</td>
+                            <td id="name">{first_name}</td>
                         </tr>
                         <tr>
                             <td>Surname</td>
-                            <td id="surname">Smith</td>
+                            <td id="surname">{last_name}</td>
+                        </tr>
+                        <tr>
+                            <td>Username</td>
+                            <td id="username">{username}</td>
                         </tr>
                         <tr>
                             <td>Email</td>
-                            <td id="email">lol@ticket.com</td>
+                            <td id="email">{email}</td>
                         </tr>
                         <tr>
                             <td>Status</td>
-                            <td id="user-status">Admin</td>
-                        </tr>
-                        <tr>
-                            <td>City</td>
-                            <td>Kyiv</td>
+                            <td id="user-status">{user_status}</td>
                         </tr>
                     </table>
                     <button className="basic-button"><a href="profile-update.html">Edit</a></button>

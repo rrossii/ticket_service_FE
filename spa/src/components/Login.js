@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
 
@@ -44,8 +44,9 @@ export function Login() {
                 return response.json()
             })
             .then(data => {
-                localStorage.setItem('name', data.first_name);
-                localStorage.setItem('surname', data.last_name);
+                localStorage.setItem('first_name', data.first_name);
+                localStorage.setItem('last_name', data.last_name);
+                localStorage.setItem('username', data.username);
                 localStorage.setItem('email', data.email);
                 localStorage.setItem('user_session', "True");
                 localStorage.setItem('user_status', data.user_status);
