@@ -10,6 +10,8 @@ import {Login} from "./components/Login";
 import {Registration} from "./components/Registration";
 import {AdminProfile} from "./components/AdminProfile";
 import {UserProfile} from "./components/UserProfile";
+import {UpdateProfile} from "./components/UpdateProfile";
+
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
             <Route path='/registration' element={<Registration/>}/>
             <Route path='/admin' element={<AdminProfile/>}/>
             <Route path='/user-profile' element={<UserProfile/>}/>
+            <Route path='/update-profile' element={<UpdateProfile/>}/>
           </Routes>
         </div>
         <Footer/>
