@@ -64,6 +64,7 @@ export function Registration() {
                 localStorage.setItem('email', data.email);
                 localStorage.setItem('user_session', "True");
                 localStorage.setItem('user_status', data.user_status);
+                localStorage.setItem('user_id', data.user_id);
 
                 navigate("/");
             })

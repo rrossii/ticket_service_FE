@@ -1,8 +1,9 @@
 
 import {Link, useNavigate} from "react-router-dom";
 import {Logout} from "./Logout";
-import {isAdmin, isUser} from "../utils/Utils";
+import {isUser} from "../utils/Utils";
 import React from "react";
+import {DeleteProfile} from "./DeleteProfile";
 
 export function UserProfile() {
     const first_name = localStorage.getItem("first_name" || "");
@@ -21,6 +22,14 @@ export function UserProfile() {
         Logout();
         navigate("/");
     };
+
+    const handleDeleteProfile = () => {
+        const confirmed = window.confirm("Are you sure you want to delete your profile? This can't be undone.");
+        if (confirmed) {
+            DeleteProfile();
+            navigate("/");
+        }
+    }
 
     return(
         <div className="container text-center mt-4">
@@ -58,7 +67,10 @@ export function UserProfile() {
                             <td id="user-status">{user_status}</td>
                         </tr>
                     </table>
-                    <button className="basic-button"><Link to="/update-profile">Edit</Link></button>
+                    <div className={"justify-content-between"}>
+                        <button className="basic-button p-2"><Link to="/update-profile">Edit</Link></button>
+                        <button onClick={handleDeleteProfile} className="delete-button p-2">Delete</button>
+                    </div>
                 </div>
             </div>
         </div>
