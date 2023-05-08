@@ -10,3 +10,8 @@ export function isUser() {
         return true;
     }
 }
+
+export function isLoggedIn() {
+    const user_session = localStorage.getItem("user_session");
+    return user_session === "True";
+}

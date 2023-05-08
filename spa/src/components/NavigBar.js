@@ -1,5 +1,10 @@
 import { Link } from 'react-router-dom';
+import {isAdmin, isLoggedIn} from "../utils/Utils";
+
 export function NavigBar() {
+    const loggedIn = isLoggedIn();
+    const ifAdmin = isAdmin();
+
     return(
         <div className="container-fluid">
             <div className="row">
@@ -31,18 +36,30 @@ export function NavigBar() {
                             <li className="nav-item active">
                                 <a className="nav-link" href="theater.html">Theater</a>
                             </li>
-                            <li className="nav-item active" id="login-btn">
-                                <Link className="nav-link" to="/login">Sign in</Link>
-                            </li>
-                            <li className="nav-item active" id="register-btn">
-                                <Link className="nav-link" to="/registration">Sign up</Link>
-                            </li>
-                            <li className="nav-item active" id="profile-user-btn">
-                                <Link className="nav-link" to="/user-profile">Profile</Link>
-                            </li>
-                            <li className="nav-item active" id="profile-admin-btn">
-                                <Link className="nav-link" to="/admin">Profile</Link>
-                            </li>
+                            {loggedIn ? (
+                                <>
+                                    {ifAdmin ? (
+                                        <li className="nav-item active" id="profile-admin-btn">
+                                            <Link className="nav-link" to="/admin">Profile</Link>
+                                        </li>
+                                    ) : (
+                                        <li className="nav-item active" id="profile-user-btn">
+                                            <Link className="nav-link" to="/user-profile">Profile</Link>
+                                        </li>
+                                    )}
+
+                                </>
+                            ) : (
+                                <>
+                                    <li className="nav-item active" id="login-btn">
+                                        <Link className="nav-link" to="/login">Sign in</Link>
+                                    </li>
+                                    <li className="nav-item active" id="register-btn">
+                                        <Link className="nav-link" to="/registration">Sign up</Link>
+                                    </li>
+                                </>
+                                )
+                            }
                         </ul>
                     </div>
                 </nav>

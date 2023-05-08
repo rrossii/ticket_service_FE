@@ -1,5 +1,3 @@
-import React, { useEffect } from 'react';
-
 export function DeleteProfile() {
     const user_id = localStorage.getItem("user_id" || "0");
     const authToken = localStorage.getItem('token');
