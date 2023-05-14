@@ -49,6 +49,7 @@ export function Login() {
                 localStorage.setItem('last_name', data.last_name);
                 localStorage.setItem('username', data.username);
                 localStorage.setItem('email', data.email);
+                localStorage.setItem('phone', data.phone);
                 localStorage.setItem('user_session', "True");
                 localStorage.setItem('user_status', data.user_status);
                 localStorage.setItem('user_id', data.user_id);
@@ -81,7 +82,7 @@ export function Login() {
                         <br />
                         <input onChange={e => setPassword(e.target.value)} type="password" className="form-control" id="password" placeholder="Password" required />
                         <br />
-                        <input type="submit" value="Sign in" />
+                        <input className={"mt-3"} type="submit" value="Sign in" />
                     </form>
                 </div>
             </div>

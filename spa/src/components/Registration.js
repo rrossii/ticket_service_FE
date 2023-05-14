@@ -62,6 +62,7 @@ export function Registration() {
                 localStorage.setItem('last_name', data.last_name);
                 localStorage.setItem('username', data.username);
                 localStorage.setItem('email', data.email);
+                localStorage.setItem('phone', data.phone);
                 localStorage.setItem('user_session', "True");
                 localStorage.setItem('user_status', data.user_status);
                 localStorage.setItem('user_id', data.user_id);
@@ -93,7 +94,7 @@ export function Registration() {
                         <input onChange={e => phoneHandler(e)} value={phone} type="text" className="form-control" id="phone" placeholder="Enter Phone" required autoComplete="off"/><br/>
                         <input onChange={e => passwordHandler(e)} value={password} type="password" className="form-control" id="password" placeholder="Enter Password" required /><br/>
                         {/*<input onChange={e => setRepeatedPass(e.target.value)} type="password" className="form-control" id="password_repeat" placeholder="Confirm Password" required /><br/>*/}
-                        <input type="submit" value="Sign up" />
+                        <input className={"mt-3"} type="submit" value="Sign up" />
                         <p className="mt-2">Already have an account? <a href="login.html">Sign in</a>.</p>
                     </form>
                 </div>
