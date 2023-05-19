@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
 
@@ -49,11 +49,6 @@ export function UpdateProfile() {
                 localStorage.setItem('user_session', "True");
                 // localStorage.setItem('user_id', data.user_id);
 
-                // if (data.user_status === "admin") {
-                //     navigate("/admin");
-                // } else if (data.user_status === "user") {
-                //     navigate("/user-profile");
-                // }
                 returnToUserOrAdminProfile();
             })
             .catch((error) => {

@@ -5,12 +5,15 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import {NavigBar} from "./components/NavigBar";
 import {Footer} from "./components/Footer";
 import {Main} from "./components/Main";
+
 import {Login} from "./components/Login";
 import {Registration} from "./components/Registration";
 import {AdminProfile} from "./components/AdminProfile";
 import {UserProfile} from "./components/UserProfile";
 import {UpdateProfile} from "./components/UpdateProfile";
 import {UserListing} from "./components/UserListing";
+
+import {AddEvent} from "./components/AddEvent"
 
 
 function App() {
@@ -26,6 +29,7 @@ function App() {
             <Route path='/user-profile' element={<UserProfile/>}/>
             <Route path='/update-profile' element={<UpdateProfile/>}/>
             <Route path='/user-list' element={<UserListing/>}/>
+            <Route path='/add-event' element={<AddEvent/>}/>
           </Routes>
         </div>
         <Footer/>
