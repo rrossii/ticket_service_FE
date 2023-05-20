@@ -1,7 +1,11 @@
-import { useParams } from 'react-router-dom';
-import {useEffect, useState} from "react";
+import {Link, useNavigate, useParams} from 'react-router-dom';
+import React, {useEffect, useState} from "react";
+import {isAdmin} from "../utils/Utils";
+import {DeleteEvent} from "./DeleteEvent";
 
 export function EventPage() {
+    const ifAdmin = isAdmin();
+
     const { eventId } = useParams();
 
     const [name, setName] = useState("");
@@ -9,6 +13,8 @@ export function EventPage() {
     const [price, setPrice] = useState(0);
     const [date, setDate] = useState();
     const [info, setInfo] = useState("Some info about event");
+
+    const navigate = useNavigate();
 
     const url = `http://127.0.0.1:5000/tickets/${eventId}`
 
@@ -38,6 +44,17 @@ export function EventPage() {
             });
     }, [eventId]);
 
+    const handleUpdateEventClick = () => {
+        navigate("/update-event");
+    }
+    const handleDeleteEventClick = () => {
+        const confirmed = window.confirm("Are you sure you want to delete this event? This can't be undone.");
+        if (confirmed) {
+            DeleteEvent();
+            navigate("/");
+        }
+    }
+
     return(
         <div className="container">
             <div className="row ">
@@ -60,6 +77,14 @@ export function EventPage() {
                     <br/>
                     <br/>
                     <br/>
+                    {ifAdmin ? (
+                            <div className={"justify-content-between"}>
+                                <button onClick={handleUpdateEventClick} className="basic-button">Update event</button>
+                                <button onClick={handleDeleteEventClick} className="delete-button p-2" >Delete event</button>
+                            </div>
+                        ) : (
+                            <></>
+                    )}
                 </div>
             </div>
         </div>

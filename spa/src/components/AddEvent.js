@@ -1,5 +1,6 @@
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {useNavigate} from 'react-router-dom';
+import {isAdmin} from "../utils/Utils";
 
 export function AddEvent() {
     const [name, setName] = useState("");
@@ -17,6 +18,10 @@ export function AddEvent() {
     const [hour, setHour] = useState(18);
 
     const navigate = useNavigate();
+
+    if (!isAdmin()) {
+        return <h1 className={"m-5 text-center"}><b>Access denied.</b></h1>;
+    }
 
     const getDaysInMonth = (y, m) => {
         const date = new Date(y, m, 1);
@@ -80,7 +85,7 @@ export function AddEvent() {
             .then(async response => {
                 if (!response.ok) {
                     const json_data = await response.json();
-                    throw new Error(json_data.error);
+                    throw new Error(json_data.message);
                 }
                 return response.json()
             })
