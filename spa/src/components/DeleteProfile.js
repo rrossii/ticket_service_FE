@@ -6,6 +6,7 @@ export function DeleteProfile() {
 
     localStorage.setItem('user_session', "False");
     localStorage.setItem('user_status', null);
+    localStorage.setItem('token', null);
 
     fetch(url, {
         method: "DELETE",
