@@ -41,9 +41,11 @@ export function EventPage() {
 
     return(
         <div className="container">
-            <div className="row">
-                <img src={`${process.env.PUBLIC_URL}/images/basic-event-photo.jpg`} alt="event-photo" style={{ width: '60%'}}/>
-                <div className="event-info-wrap col-5 pt-5 text-center">
+            <div className="row ">
+                <div className="col-12 col-md-9 text-center text-md-start">
+                    <img src={`${process.env.PUBLIC_URL}/images/basic-event-photo.jpg`} alt="event-photo" style={{ width: '70%'}}/>
+                </div>
+                <div className="col-12 col-md-3 pt-5 mt-3 me-1 me-md-0 mt-md-0 text-center event-info-wrap">
                     <div className="event-main-text-info">
                         <p>{date}, {place}</p>
                         <p>{price} UAH</p>
@@ -52,7 +54,7 @@ export function EventPage() {
                 </div>
 
             </div>
-            <div className="row"  style={{ width: '60%'}}>
+            <div className="row" style={{ width: '70%'}}>
                 <div className="col">
                     <h1 className="top-text mt-4" id="event-title">{name}</h1>
                     <h4 className="top-text" id="event-info">{info}</h4>
