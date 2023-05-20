@@ -27,6 +27,16 @@ export function categoriesArray() {
     }
     return res;
 }
+
+export function findCategoryNameByItsId(category_id) { // для того аби при редагуванні квитка дістати його категорію, оскільки в базі дних збергігається category_id а не category
+    const categ = ["Theater", "Festival", "Sport", "Concert"];
+
+    try {
+        return categ[category_id - 1];
+    } catch (e) {
+        alert(e);
+    }
+}
 export function getDaysInMonth(y, m) {
     const date = new Date(y, m, 1);
     date.setMonth(date.getMonth() + 1);

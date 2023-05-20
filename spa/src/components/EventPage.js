@@ -45,7 +45,7 @@ export function EventPage() {
     }, [eventId]);
 
     const handleUpdateEventClick = () => {
-        navigate("/update-event");
+        navigate(`/update-event/${eventId}`);
     }
     const handleDeleteEventClick = () => {
         const confirmed = window.confirm("Are you sure you want to delete this event? This can't be undone.");
@@ -79,7 +79,7 @@ export function EventPage() {
                     <br/>
                     {ifAdmin ? (
                             <div className={"justify-content-between"}>
-                                <button onClick={handleUpdateEventClick} className="basic-button">Update event</button>
+                                <button onClick={handleUpdateEventClick} className="basic-button">Update event info</button>
                                 <button onClick={handleDeleteEventClick} className="delete-button p-2" >Delete event</button>
                             </div>
                         ) : (
