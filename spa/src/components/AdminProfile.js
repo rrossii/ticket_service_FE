@@ -26,6 +26,10 @@ export function AdminProfile() {
         navigate("/user-list");
     };
 
+    const handleAddEventClick = () => {
+        navigate("/add-event");
+    }
+
     const handleDeleteProfile = () => {
         const confirmed = window.confirm("Are you sure you want to delete your profile? This can't be undone.");
         if (confirmed) {
@@ -44,7 +48,7 @@ export function AdminProfile() {
                     <nav className="nav nav-pills flex-column">
                         <button className="basic-button"><a href="purchase-history.html">Purchase history</a></button>
                         <button className="basic-button"><a href="#">Favourites</a></button>
-                        <button className="basic-button"><a href="adding-ticket.html">Add new ticket</a></button>
+                        <button onClick={handleAddEventClick} className="basic-button">Add new event</button>
                         <button onClick={handleUserListingClick} className="basic-button">User listing</button>
                         <button onClick={handleLogout} className="basic-button my-3" id="logout-btn">Log Out</button>
                     </nav>

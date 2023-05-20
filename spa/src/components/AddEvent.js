@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {useNavigate} from 'react-router-dom';
 
 export function AddEvent() {
@@ -52,9 +52,9 @@ export function AddEvent() {
         for (let i = 0; i < categ.length; i++) {
             res.push(<option type="string" value={categ[i]}>{categ[i]}</option>);
         }
-
         return res;
     }
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -71,7 +71,7 @@ export function AddEvent() {
 
         fetch(url, {
             method: "POST",
-            body: JSON.stringify({name, price, category, quantity, date, place}),
+            body: JSON.stringify({name, price, category, quantity, date, place, info}),
             headers: {
                 "Content-Type": "application/json",
                 'Authorization': `Bearer ${authToken}`
@@ -94,6 +94,7 @@ export function AddEvent() {
 
     }
     const handleCancel = () => {
+        navigate("/admin")
     }
 
     return(
@@ -146,7 +147,7 @@ export function AddEvent() {
                 </div>
                 <div className="col-md-5">
                     <form>
-                        <img src="images/basic-photo-icon.jpg" alt="no-uploaded-photo" width="70%" height="50%"/>
+                        <img src={`${process.env.PUBLIC_URL}/images/basic-photo-icon.jpg`} alt="no-uploaded-photo" width="70%" height="50%"/>
                         <input type="file" className="my-3" name="event-photo"/>
                         <input type="submit" value="Upload a photo"/>
                     </form>

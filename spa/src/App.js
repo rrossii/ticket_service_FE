@@ -14,7 +14,7 @@ import {UpdateProfile} from "./components/UpdateProfile";
 import {UserListing} from "./components/UserListing";
 
 import {AddEvent} from "./components/AddEvent"
-
+import {EventPage} from "./components/EventPage"
 
 function App() {
   return (
@@ -30,6 +30,7 @@ function App() {
             <Route path='/update-profile' element={<UpdateProfile/>}/>
             <Route path='/user-list' element={<UserListing/>}/>
             <Route path='/add-event' element={<AddEvent/>}/>
+            <Route path='/event/:eventId' element={<EventPage/>}/>
           </Routes>
         </div>
         <Footer/>
