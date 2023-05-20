@@ -1,4 +1,4 @@
-import {Link, useNavigate, useParams} from 'react-router-dom';
+import {useNavigate, useParams} from 'react-router-dom';
 import React, {useEffect, useState} from "react";
 import {isAdmin} from "../utils/Utils";
 import {DeleteEvent} from "./DeleteEvent";
@@ -28,7 +28,7 @@ export function EventPage() {
             .then(async response => {
                 if (!response.ok) {
                     const json_data = await response.json();
-                    throw new Error(json_data.error);
+                    throw new Error(json_data.message);
                 }
                 return response.json()
             })
@@ -50,7 +50,7 @@ export function EventPage() {
     const handleDeleteEventClick = () => {
         const confirmed = window.confirm("Are you sure you want to delete this event? This can't be undone.");
         if (confirmed) {
-            DeleteEvent();
+            DeleteEvent(eventId);
             navigate("/");
         }
     }

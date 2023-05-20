@@ -6,7 +6,7 @@ export function Theater() {
 
     useEffect(() => {
         const allTheaters = () => {
-            const url = `http://127.0.0.1:5000/tickets/findByCategory/concert`;
+            const url = `http://127.0.0.1:5000/tickets/findByCategory/theater`;
 
             fetch(url, {
                 method: "GET",
