@@ -15,6 +15,10 @@ import {UserListing} from "./components/UserListing";
 
 import {AddEvent} from "./components/AddEvent"
 import {EventPage} from "./components/EventPage"
+import {Festival} from "./components/Festival"
+import {Concert} from "./components/Concert"
+import {Sport} from "./components/Sport"
+import {Theater} from "./components/Theater"
 
 function App() {
   return (
@@ -31,6 +35,10 @@ function App() {
             <Route path='/user-list' element={<UserListing/>}/>
             <Route path='/add-event' element={<AddEvent/>}/>
             <Route path='/event/:eventId' element={<EventPage/>}/>
+            <Route path='/festival' element={<Festival/>}/>
+            <Route path='/concert' element={<Concert/>}/>
+            <Route path='/sport' element={<Sport/>}/>
+            <Route path='/theater' element={<Theater/>}/>
           </Routes>
         </div>
         <Footer/>

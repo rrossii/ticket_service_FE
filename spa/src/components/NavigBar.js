@@ -28,13 +28,16 @@ export function NavigBar() {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav text-center">
                             <li className="nav-item active">
-                                <a className="nav-link" href="concerts.html">Concerts</a>
+                                <Link className="nav-link" to="/concert">Concerts</Link>
                             </li>
                             <li className="nav-item active">
-                                <a className="nav-link" href="fests.html">Fests</a>
+                                <Link className="nav-link" to="/festival">Fests</Link>
                             </li>
                             <li className="nav-item active">
-                                <a className="nav-link" href="theater.html">Theater</a>
+                                <Link className="nav-link" to="/theater">Theater</Link>
+                            </li>
+                            <li className="nav-item active">
+                                <Link className="nav-link" to="/sport">Sport</Link>
                             </li>
                             {loggedIn ? (
                                 <>

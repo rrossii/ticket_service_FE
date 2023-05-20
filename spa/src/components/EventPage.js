@@ -12,7 +12,6 @@ export function EventPage() {
 
     const url = `http://127.0.0.1:5000/tickets/${eventId}`
 
-
     useEffect(() => {
         fetch(url, {
             method: "GET",

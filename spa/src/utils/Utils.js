@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 export function isAdmin() {
     const user_status = localStorage.getItem("user_status" || "");
     if (user_status === "admin") {
