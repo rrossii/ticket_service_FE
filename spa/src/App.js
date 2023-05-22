@@ -20,6 +20,8 @@ import {Concert} from "./components/Concert"
 import {Sport} from "./components/Sport"
 import {Theater} from "./components/Theater"
 
+import {UpdateEvent} from "./components/UpdateEvent"
+
 function App() {
   return (
       <BrowserRouter>
@@ -39,6 +41,7 @@ function App() {
             <Route path='/concert' element={<Concert/>}/>
             <Route path='/sport' element={<Sport/>}/>
             <Route path='/theater' element={<Theater/>}/>
+            <Route path='/update-event/:eventId' element={<UpdateEvent/>}/>
           </Routes>
         </div>
         <Footer/>

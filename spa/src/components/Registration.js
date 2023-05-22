@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 export function Registration() {
     const [first_name, setName] = useState('');
@@ -95,7 +95,7 @@ export function Registration() {
                         <input onChange={e => passwordHandler(e)} value={password} type="password" className="form-control" id="password" placeholder="Enter Password" required /><br/>
                         {/*<input onChange={e => setRepeatedPass(e.target.value)} type="password" className="form-control" id="password_repeat" placeholder="Confirm Password" required /><br/>*/}
                         <input className={"mt-3"} type="submit" value="Sign up" />
-                        <p className="mt-2">Already have an account? <a href="login.html">Sign in</a>.</p>
+                        <p className="mt-2">Already have an account? <Link to="/login">Sign in</Link>.</p>
                     </form>
                 </div>
             </div>

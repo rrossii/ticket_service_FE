@@ -66,7 +66,7 @@ export function UpdateProfile() {
                 <div className="col-md-7">
                     <form>
                         <h1 className="top-text mb-4">Edit information</h1><br/>
-                        <input onChange={e => setName(e.target.value)} value={first_name} type="text" className="form-control" placeholder="Email"/><br/>
+                        <input onChange={e => setName(e.target.value)} value={first_name} type="text" className="form-control" placeholder="Name"/><br/>
                         <input onChange={e => setSurname(e.target.value)} value={last_name} type="text" className="form-control" placeholder="Surname"/><br/>
                         <input onChange={e => setUsername(e.target.value)} value={username} type="text" className="form-control" placeholder="Username"/><br/>
                         <input onChange={e => setEmail(e.target.value)} value={email} type="email" className="form-control" placeholder="Email"/><br/>
