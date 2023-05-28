@@ -27,12 +27,13 @@ export function Sport() {
                     for (let i = 0; i < data.length; i++) {
                         const eventId = data[i].ticket_id;
                         const sportEventName = data[i].name;
+                        const image = data[i].image;
 
                         sport.push(
                             <div className="col col-md-5 col-lg-3 mx-4">
                                 <div className="event-item">
                                     <Link to={`/event/${eventId}`}>
-                                        <img src={`${process.env.PUBLIC_URL}/images/basic-event-photo.jpg`} alt="fest-image"
+                                        <img src={image} alt="fest-image"
                                              width="250" height="200"/>
                                         <p className="event-main-text-info">{sportEventName}</p>
                                     </Link>
