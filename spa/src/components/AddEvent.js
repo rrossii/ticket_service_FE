@@ -11,6 +11,8 @@ export function AddEvent() {
     const [quantity, setQuantity] = useState(0);
     const [place, setPlace] = useState("");
     const [info, setInfo] = useState("");
+    const [selectedImage, setSelectedImage] = useState(null);
+    const [imageName, setImageName] = useState("basic-event-photo.jpg");
 
     const [year, setYear] = useState(2023);
     const [month, setMonth] = useState(1);
@@ -22,6 +24,12 @@ export function AddEvent() {
     if (!isAdmin()) {
         return <h1 className={"m-5 text-center"}><b>Access denied.</b></h1>;
     }
+
+    const handleFileChange = (event) => {
+        const img = event.target.files[0];
+        setSelectedImage(img);
+        setImageName(img.name);
+    };
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -38,7 +46,7 @@ export function AddEvent() {
 
         fetch(url, {
             method: "POST",
-            body: JSON.stringify({name, price, category, quantity, date, place, info}),
+            body: JSON.stringify({name, price, category, quantity, date, place, info, imageName}),
             headers: {
                 "Content-Type": "application/json",
                 'Authorization': `Bearer ${authToken}`
@@ -115,8 +123,7 @@ export function AddEvent() {
                 <div className="col-md-5">
                     <form>
                         <img src={`${process.env.PUBLIC_URL}/images/basic-photo-icon.jpg`} alt="no-uploaded-photo" width="70%" height="50%"/>
-                        <input type="file" className="my-3" name="event-photo"/>
-                        <input type="submit" value="Upload a photo"/>
+                        <input onChange={handleFileChange} type="file" className="my-3" name="event-photo"/>
                     </form>
                     <input onClick={handleCancel} type="submit" className="my-4" value="Cancel"/>
                     <input onClick={handleSubmit} type="submit" className="my-4" value="Save"/>

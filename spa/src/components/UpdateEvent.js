@@ -13,6 +13,7 @@ export function UpdateEvent() {
     const [defaultStatus, setDefaultStatus] = useState("");
     const [defaultInfo, setDefaultInfo] = useState("");
     const [defaultDate, setDefaultDate] = useState();
+    const [defaultImageName, setDefaultImageName] = useState("basic-event-photo.jpg");
 
     const [name, setName] = useState("");
     const [inputPrice, setInputPrice] = useState("");
@@ -22,6 +23,8 @@ export function UpdateEvent() {
     const [status, setStatus] = useState("");
     const [info, setInfo] = useState("");
     const [date, setDate] = useState("");
+    const [selectedImage, setSelectedImage] = useState(null);
+    const [imageName, setImageName] = useState("");
 
     const navigate = useNavigate();
 
@@ -50,6 +53,7 @@ export function UpdateEvent() {
                 setDefaultStatus(data.status);
                 setDefaultDate(data.date);
                 setDefaultInfo(data.info);
+                setDefaultImageName(data.image.replace("/images/", ""));
             })
             .catch((error) => {
                 alert(error);
@@ -70,10 +74,11 @@ export function UpdateEvent() {
         const updatedStatus = status || defaultStatus;
         const updatedInfo = info || defaultInfo;
         const updatedDate = date || defaultDate;
+        const updatedImageName = imageName || defaultImageName;
 
         fetch(url, {
             method: "PUT",
-            body: JSON.stringify({updatedName, updatedPrice, updatedCategory, updatedQuantity, updatedDate, updatedPlace, updatedStatus, updatedInfo}),
+            body: JSON.stringify({updatedName, updatedPrice, updatedCategory, updatedQuantity, updatedDate, updatedPlace, updatedStatus, updatedInfo, updatedImageName}),
             headers: {
                 "Content-Type": "application/json",
                 'Authorization': `Bearer ${authToken}`
@@ -87,7 +92,7 @@ export function UpdateEvent() {
                 return response.json()
             })
             .then(() => {
-                navigate("/admin")
+                navigate(`/event/${eventId}`)
             })
             .catch((error) => {
                 alert(error);
@@ -97,6 +102,12 @@ export function UpdateEvent() {
     const handleCancel = () => {
         navigate("/");
     }
+
+    const handleFileChange = (event) => {
+        const img = event.target.files[0];
+        setSelectedImage(img);
+        setImageName(img.name);
+    };
 
     return(
         <div className="container text-center" id="update-profile-info">
@@ -121,8 +132,7 @@ export function UpdateEvent() {
                 <div className="col-md-5">
                     <form>
                         <img src={`${process.env.PUBLIC_URL}/images/basic-photo-icon.jpg`} alt="no-uploaded-photo" width="70%" height="50%"/>
-                        <input type="file" className="my-3" name="profile-photo"/>
-                        <input type="submit" value="Upload a photo"/>
+                        <input onChange={handleFileChange} type="file" className="my-3" name="event-photo"/>
                     </form>
                     <input onClick={handleCancel} type="submit" className="my-4" value="Cancel"/>
                     <input onClick={handleSubmit} type="submit" className="my-4" value="Save"/>
