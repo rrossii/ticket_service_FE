@@ -69,6 +69,9 @@ export function UserProfile() {
                     <div className={"justify-content-between"}>
                         <button className="basic-button p-2"><Link to="/update-profile">Edit</Link></button>
                         <button onClick={handleDeleteProfile} className="delete-button p-2">Delete</button>
+                        <br/>
+                        <br/>
+                        <br/>
                     </div>
                 </div>
             </div>

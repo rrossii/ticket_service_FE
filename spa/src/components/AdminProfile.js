@@ -46,8 +46,6 @@ export function AdminProfile() {
                 </div>
                 <div className="col-md-3">
                     <nav className="nav nav-pills flex-column">
-                        <button className="basic-button"><a href="purchase-history.html">Purchase history</a></button>
-                        <button className="basic-button"><a href="#">Favourites</a></button>
                         <button onClick={handleAddEventClick} className="basic-button">Add new event</button>
                         <button onClick={handleUserListingClick} className="basic-button">User listing</button>
                         <button onClick={handleLogout} className="basic-button my-3" id="logout-btn">Log Out</button>
@@ -79,6 +77,9 @@ export function AdminProfile() {
                     <div className={"justify-content-between"}>
                         <button className="basic-button p-2"><Link to="/update-profile">Edit</Link></button>
                         <button onClick={handleDeleteProfile} className="delete-button p-2">Delete</button>
+                        <br/>
+                        <br/>
+                        <br/>
                     </div>
                 </div>
             </div>

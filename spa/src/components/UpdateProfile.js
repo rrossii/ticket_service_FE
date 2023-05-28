@@ -37,7 +37,7 @@ export function UpdateProfile() {
             .then(async response => {
                 if (!response.ok) {
                     const json_data = await response.json();
-                    throw new Error(json_data.error);
+                    throw new Error(json_data.message);
                 }
                 return response.json()
             })
@@ -75,7 +75,7 @@ export function UpdateProfile() {
                 </div>
                 <div className="col-md-5">
                     <form>
-                        <img src="images/basic-photo-icon.jpg" alt="no-uploaded-photo" width="70%" height="50%"/>
+                        <img src="/images/basic-photo-icon.jpg" alt="no-uploaded-photo" width="70%" height="50%"/>
                         <input type="file" className="my-3" name="profile-photo"/>
                         <input type="submit" value="Upload a photo"/>
                     </form>
