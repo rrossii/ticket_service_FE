@@ -57,6 +57,10 @@ export function EventPage() {
         }
     }
 
+    const handleOrderButton = () => {
+        navigate(`/order-event/${eventId}`);
+    }
+
     return(
         <div className="container">
             <div className="row ">
@@ -67,7 +71,7 @@ export function EventPage() {
                     <div className="event-main-text-info">
                         <p>{date}, {place}</p>
                         <p>{price} UAH</p>
-                        <button className="basic-button">Order</button>
+                        <button onClick={handleOrderButton} className="basic-button">Order</button>
                     </div>
                 </div>
 

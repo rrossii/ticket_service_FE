@@ -22,6 +22,8 @@ import {Theater} from "./components/Theater"
 
 import {UpdateEvent} from "./components/UpdateEvent"
 
+import {OrderEvent} from "./components/OrderEvent"
+
 function App() {
   return (
       <BrowserRouter>
@@ -42,6 +44,7 @@ function App() {
             <Route path='/sport' element={<Sport/>}/>
             <Route path='/theater' element={<Theater/>}/>
             <Route path='/update-event/:eventId' element={<UpdateEvent/>}/>
+            <Route path='/order-event/:eventId' element={<OrderEvent/>}/>
           </Routes>
         </div>
         <Footer/>

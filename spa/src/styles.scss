@@ -8,6 +8,7 @@ $nav-brand-hover-color: #a5f393;
 $primary-hover-color: #dbc1ea;
 $primary-text-color: #1a1e21;
 $white: #ffffff;
+$grey: #3a3838;
 $button-color-1: #B7A0C5;
 $delete-button-color: #53c743;
 
@@ -107,6 +108,10 @@ input[type="text"], input[type="email"], input[type="password"] {
   font-weight: bold;
   color: $white;
 }
+.informative-grey-text {
+  font-family: $digital_font;
+  color: $grey;
+}
 //
 
 .logo {
@@ -175,6 +180,13 @@ table {
 
   font-size: 15px;
   font-family: $digital-font;
+}
+
+.order-button {
+  font-weight: bold;
+}
+.order-button:hover {
+  background-color: $nav-brand-hover-color;
 }
 
 #admin-page {
