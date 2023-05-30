@@ -149,7 +149,7 @@ tr {
   border-bottom: 2px solid #ddd;
 }
 tr:hover {
-  background-color: $primary-hover-color;
+  background-color: $nav-brand-hover-color;
 }
 .user-info {
   background: $primary-color;
@@ -160,6 +160,9 @@ table {
 }
 .purchase-history {
   margin-bottom: 25%;
+}
+.table-header {
+  background-color: $primary-hover-color;
 }
 
 //buttons

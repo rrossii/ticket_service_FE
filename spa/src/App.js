@@ -23,6 +23,7 @@ import {Theater} from "./components/Theater"
 import {UpdateEvent} from "./components/UpdateEvent"
 
 import {OrderEvent} from "./components/OrderEvent"
+import {PurchaseHistory} from "./components/PurchaseHistory"
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
             <Route path='/theater' element={<Theater/>}/>
             <Route path='/update-event/:eventId' element={<UpdateEvent/>}/>
             <Route path='/order-event/:eventId' element={<OrderEvent/>}/>
+            <Route path='/purchase-history' element={<PurchaseHistory/>}/>
           </Routes>
         </div>
         <Footer/>

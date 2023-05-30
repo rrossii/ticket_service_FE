@@ -29,6 +29,9 @@ export function UserProfile() {
             navigate("/");
         }
     }
+    const handlePurchaseHistoryClick = () => {
+        navigate("/purchase-history");
+    }
 
     return(
         <div className="container text-center mt-4">
@@ -38,33 +41,43 @@ export function UserProfile() {
                 </div>
                 <div className="col-md-3">
                     <nav className="nav nav-pills flex-column">
-                        <button className="basic-button"><a href="purchase-history.html">Purchase history</a></button>
+                        <button onClick={handlePurchaseHistoryClick} className="basic-button">Purchase history</button>
                         <button className="basic-button"><a href="#">Favourites</a></button>
                         <button onClick={handleLogout} className="basic-button my-3" id="logout-btn">Log out</button>
                     </nav>
                 </div>
                 <div className="col-md-9">
                     <table className="user-info">
+                        <tbody>
                         <tr>
                             <td>Name</td>
                             <td id="name">{first_name}</td>
                         </tr>
+                        </tbody>
+                        <tbody>
                         <tr>
                             <td>Surname</td>
                             <td id="surname">{last_name}</td>
                         </tr>
+                        </tbody>
+                        <tbody>
                         <tr>
                             <td>Username</td>
                             <td id="username">{username}</td>
                         </tr>
+                        </tbody>
+                        <tbody>
                         <tr>
                             <td>Email</td>
                             <td id="email">{email}</td>
                         </tr>
+                        </tbody>
+                        <tbody>
                         <tr>
                             <td>Status</td>
                             <td id="user-status">{user_status}</td>
                         </tr>
+                        </tbody>
                     </table>
                     <div className={"justify-content-between"}>
                         <button className="basic-button p-2"><Link to="/update-profile">Edit</Link></button>
