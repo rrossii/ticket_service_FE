@@ -5,6 +5,7 @@ import {useNavigate, useParams} from "react-router-dom";
 export function OrderEvent() {
     const {eventId} = useParams();
 
+    const [eventName, setEventName] = useState("");
     const [quantity, setQuantity] = useState(0);
     const [priceForOneTicket, setPriceForOneTicket] = useState(0);
     const [price, setPrice] = useState(0);
@@ -30,6 +31,7 @@ export function OrderEvent() {
             })
             .then(data => {
                 setPriceForOneTicket(data.price);
+                setEventName(data.name);
             })
             .catch((error) => {
                 alert(error);
@@ -67,9 +69,10 @@ export function OrderEvent() {
             })
             .catch((error) => {
                 alert(error);
+                navigate(`/order-event/${eventId}`)
             });
 
-        navigate("/")
+        navigate(`/event/${eventId}`)
 
     }
 
@@ -92,7 +95,7 @@ export function OrderEvent() {
             <div className="row ">
                 <div className="col-12 text-center text-md-start">
                     <form onSubmit={handleSubmit}>
-                        <h1 className="top-text mt-4">Order event</h1><br/>
+                        <h1 className="top-text mt-4">Order {eventName}</h1><br/>
                         <input onChange={handleQuantityChange} defaultValue={0} type="number" className="form-control mt-3" placeholder="Quantity"/><br/>
                         {quantity > 1 ?
                             (<p className="informative-grey-text mt-4">{quantity} tickets</p>)
