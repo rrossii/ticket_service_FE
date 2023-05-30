@@ -15,6 +15,8 @@ export function EventPage() {
     const [info, setInfo] = useState("Some info about event");
     const [image, setImage] = useState("");
 
+    const [quantity, setQuantity] = useState(0);
+
     const navigate = useNavigate();
 
     const url = `http://127.0.0.1:5000/tickets/${eventId}`
@@ -40,6 +42,8 @@ export function EventPage() {
                 setDate(data.date);
                 setInfo(data.info);
                 setImage(data.image);
+
+                setQuantity(data.quantity);
             })
             .catch((error) => {
                 alert(error);
@@ -58,7 +62,11 @@ export function EventPage() {
     }
 
     const handleOrderButton = () => {
-        navigate(`/order-event/${eventId}`);
+        if (quantity === 0) {
+            alert("Tickets are sold out!");
+        } else {
+            navigate(`/order-event/${eventId}`);
+        }
     }
 
     return(
