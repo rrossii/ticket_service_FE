@@ -1,12 +1,13 @@
 import {isAdmin} from "../utils/Utils";
 import React, {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
+import {CancelBooking} from "./CancelBooking";
 
 export function PurchaseHistory() {
     const [userPurchases, setUserPurchases] = useState([]);
     const [eventNames, setEventNames] = useState([]);
 
-    const [eventBooked, setEventBooked] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const user_id = localStorage.getItem("user_id");
@@ -49,7 +50,6 @@ export function PurchaseHistory() {
                             return response.json();
                         });
                 });
-
                 Promise.all(fetchPromises)
                     .then(eventData => {
                         const eventNames = eventData.map(data => data.name);
@@ -68,6 +68,11 @@ export function PurchaseHistory() {
         return <h1 className={"m-5 text-center"}><b>Access denied.</b></h1>;
     }
 
+    const handleCancelBookingClick = (purchaseId, userId) => {
+        CancelBooking(purchaseId, userId);
+        // navigate("/purchase-history");
+    }
+
     return(
         <div className="container text-center mt-4">
             <div className="row">
@@ -82,10 +87,11 @@ export function PurchaseHistory() {
                             <th>Quantity</th>
                             <th>Price</th>
                             <th>Status</th>
+                            <th></th>
                         </tr>
                         </tbody>
-                        {userPurchases.length === 0 ? (
-                            <h1 className={"m-5 text-center"}><b>You haven't bought or booked anything by now.</b></h1>)
+                        {userPurchases.length === 0 ?
+                            (<h1 className={"m-5 text-center"}><b>You haven't bought or booked anything by now.</b></h1>)
                             :
                             (userPurchases.map((purchase, index) => (
                                 <tbody>
@@ -94,6 +100,13 @@ export function PurchaseHistory() {
                                     <td>{purchase.quantity}</td>
                                     <td>{purchase.total_price}</td>
                                     <td>{purchase.status}</td>
+                                    <td>
+                                        {purchase.status === "booked" ?
+                                            (<button onClick={() => handleCancelBookingClick(purchase.purchase_id, purchase.user_id)} className="delete-button p-2" >Cancel booking</button>)
+                                            :
+                                            (<></>)
+                                        }
+                                    </td>
                                 </tr>
                                 </tbody>
                             )))
