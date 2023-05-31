@@ -27,10 +27,10 @@ export function Footer() {
                     <div className="row">
                         <div className="col">
                             <ul className="footer-links">
-                                <li><a className="footer-item" href="concerts.html">Concerts</a></li>
-                                <li><a className="footer-item" href="fests.html">Fests</a></li>
-                                <li><a className="footer-item" href="theater.html">Theater</a></li>
-                                <li><Link className="footer-item" to="/login">Sign in</Link></li>
+                                <li><Link className="footer-item" to="/concert">Concert</Link></li>
+                                <li><Link className="footer-item" to="/festival">Festival</Link></li>
+                                <li><Link className="footer-item" to="/theater">Theater</Link></li>
+                                <li><Link className="footer-item" to="/sport">Sport</Link></li>
                             </ul>
                         </div>
 

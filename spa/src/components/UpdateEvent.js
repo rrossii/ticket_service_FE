@@ -115,17 +115,30 @@ export function UpdateEvent() {
                 <div className="col-md-7">
                     <form>
                         <h1 className="top-text mb-4">Edit event information</h1><br/>
+                        <label className="text-left mt-2" htmlFor="myInput">Event name</label>
                         <input onChange={e => setName(e.target.value)} defaultValue={defaultName} type="text" className="form-control" placeholder="Name"/><br/>
+
+                        <label className="text-left mt-2" htmlFor="myInput">Place</label>
                         <input onChange={e => setPlace(e.target.value)} defaultValue={defaultPlace} type="text" className="form-control" placeholder="Place"/><br/>
+
+                        <label className="text-left mt-2" htmlFor="myInput">Price</label>
                         <input onChange={e => setInputPrice(e.target.value)} defaultValue={defaultPrice} type="number" className="form-control" placeholder="Price"/><br/>
+
+                        <label className="text-left mt-2" htmlFor="myInput">Category</label>
                         <select onChange={e => setCategory(e.target.value)} defaultValue={defaultCategory} className="form-control" placeholder="Category">
                             {categoriesArray()}
                         </select><br/>
+
+                        <label className="text-left mt-2" htmlFor="myInput">Quantity</label>
                         <input onChange={e => setInputQuantity(e.target.value)} defaultValue={defaultQuantity} type="number" className="form-control" placeholder="Quantity"/><br/>
+
+                        <label className="text-left mt-2" htmlFor="myInput">Status</label>
                         <select onChange={e => setStatus(e.target.value)} defaultValue={defaultStatus} type="text" className="form-control" placeholder="Status">
                             <option value="available">Available</option>
                             <option value="sold out">Sold out</option>
                         </select><br/>
+
+                        <label className="text-left mt-2" htmlFor="myInput">Information</label>
                         <input onChange={e => setInfo(e.target.value)} defaultValue={defaultInfo} type="text" className="form-control" placeholder="Information"/><br/>
                     </form>
                 </div>
