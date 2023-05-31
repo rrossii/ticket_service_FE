@@ -18,8 +18,10 @@ export function DeleteProfile() {
         .then(async response => {
             if (!response.ok) {
                 const json_data = await response.json();
-                throw new Error(json_data.error);
+                throw new Error(json_data.message);
             }
         })
-        .catch(error => alert(error));
+        .catch((error) => {
+            alert(error)
+        });
 }
