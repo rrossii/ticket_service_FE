@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^14.0.0",
+    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.3",
     "react": "^18.2.0",
@@ -12,8 +12,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.1",
     "react-scripts": "^5.0.1",
-    "web-vitals": "^2.1.4",
-    "window": "^4.2.7"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -41,12 +40,10 @@
   },
   "devDependencies": {
     "@jridgewell/sourcemap-codec": "latest",
-    "jsdom": "^22.1.0",
     "rollup-plugin-terser": "latest",
     "sass": "^1.62.1",
     "sass-loader": "^13.2.2",
     "svgo": "^2.x.x",
-    "text-encoding-utf-8": "^1.0.2",
     "webpack": "^5.82.0"
   }
 }
